@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社のポータルサイト</title>
+    <link rel="stylesheet" href="./Portal/Portal-style.css">
+</head>
+<body>
+    <header>
+        <h1>会社のポータルサイト</h1>   
+        
+        <div class="search-container">
+            <input type="text" id="word-search-box" placeholder="ワード検索">
+            <input type="text" id="tag-search-box" placeholder="タグ検索" readonly>
+            <div id="tag-dropdown-container">
+                <select id="tag-dropdown" multiple>
+                    <option value="#更新">#更新</option>
+                    <option value="#マニュアル">#マニュアル</option>
+                    <option value="#SS">#SS</option>
+                    <option value="#あ">#あ</option>
+                    <option value="#tagu">#tagu</option>
+                    <!-- 他のタグも追加 -->
+                </select>
+                <button id="tag-select-button">決定</button>
+                <button id="tag-reset-button">リセット</button>
+            </div>
+            <button id="search-button">検索</button>
+            <div id="search-results" class="dropdown-content"></div>
+        </div>
+
+    </header>
+  <nav>
+        <ul>
+            <li><a href="#purpose">会社の目的</a></li>
+            <li><a href="#goals">会社の目標</a></li>
+            <li><a href="#weekly-topic">今週のTopic</a></li>
+            <li><a href="#monthly-topic">月間Topic</a></li>
+            <li><a href="#rules">ルール</a></li>
+            <li><a href="#qa">Q＆A</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="purpose">
+            <h2>会社の目的</h2>
+            <p>ここに会社の目的を記載します。</p>
+        </section>
+        <section id="goals">
+            <h2>会社の目標</h2>
+            <p>ここに会社の目標を記載します。</p>
+        </section>
+    
+        <div class="topics-row">
+            <section id="weekly-topic">
+                <h2>今週のTopic</h2>
+                <div id="weekly-topics">
+                    <p data-tags="#あ"><a href="./pdf">マニュアル更新について　24/12月更新</a><span class="tags"></span></p>
+                    <p data-tags="#更新 #マニュアル"><a href="./pdf">マニュアル更新について　24/11月更新</a><span class="tags"></span></p>
+                    <div id="more-weekly-topics" style="display: none;">
+                        <p data-tags="#SS #マニュアル"><a href="./pdf">マニュアル更新について　24/7月更新</a><span class="tags"></span></p>
+                        <p data-tags="#更新 #マニュアル"><a href="./pdf">マニュアル更新について　24/5月更新</a><span class="tags"></span></p>
+                    </div>
+                </div>
+                <button id="show-more-weekly">もっと見る</button>
+            </section>
+    
+            <section id="monthly-topic">
+                <h2>月間Topic</h2>
+                <div id="monthly-topics">
+                    <p data-tags="#更新 #マニュアル"><a href="./pdf">マニュアル更新について　24/11月更新</a><span class="tags"></span></p>
+                    <p data-tags="#更新 #マニュアル"><a href="./pdf">マニュアル更新について　24/10月更新</a><span class="tags"></span></p>
+                    <p data-tags="#更新 "><a href="./pdf">マニュアル更新について　24/5月更新</a><span class="tags"></span></p>
+                    <div id="more-monthly-topics" style="display: none;">
+                        <p data-tags="#tagu #マニュアル"><a href="./pdf">マニュアル更新について　24/6月更新</a><span class="tags"></span></p>
+                    </div>
+                </div>
+                <button id="show-more-monthly">もっと見る</button>
+            </section>
+        </div>
+    
+        <section id="past-topics">
+            <h2>過去の周知</h2>
+            <div id="past-topics-content">
+                <p data-tags="#tagu #マニュアル"><a href="./pdf">マニュアル更新について　23/6月更新</a><span class="tags"></span></p>
+                <div id="more-past-topics" style="display: none;">
+                    <p data-tags="#tagu #マニュアル"><a href="./pdf">マニュアル更新について　23/3月更新</a><span class="tags"></span></p>
+                </div>
+                <button id="show-more-past">もっと見る</button>
+            </div>
+        </section>
+    
+        <section id="rules">
+            <h2>ルール</h2>
+            <p>ここに会社のルールを記載します。</p>
+        </section>
+        <section id="qa">
+            <h2>Q＆A</h2>
+            <p>ここにQ＆Aを記載します。</p>
+        </section>
+    </main>
+    
+    <script src="./Portal/Portal-script.js"></script>
+</body>
+</html>

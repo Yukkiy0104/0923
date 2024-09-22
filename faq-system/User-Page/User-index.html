@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a id="top"></a> <!-- ページ最上部のアンカー -->  
+
+    <header><!--固定ヘッダー-->>
+        <a href="#top" id="top-link">
+            <h1>Q&A</h1>
+        </a>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="質問を検索">
+            <button onclick="searchQA()">検索</button>
+        </div>
+    </header>
+
+    <!-- 検索結果を表示するセクション -->
+    <div id="search-results">検索結果はこちらに表示されます</div>
+
+    <!-- カテゴリリンクを配置 -->
+    <div id="category-links">
+        <div class="category-item" onclick="scrollToCategory(1)">
+            <img src="./style/image/User.png" alt="お客様" class="tooltip">
+            <p>お客様</p>
+        </div>
+        <div class="category-item" onclick="scrollToCategory(2)">
+            <img src="./style/image/Company.png" alt="依頼元" class="tooltip">
+            <p>依頼元</p>
+        </div>
+        <div class="category-item" onclick="scrollToCategory(3)">
+            <img src="./style/image/SS.png" alt="サービス" class="tooltip">
+            <p>サービス</p>
+        </div>
+        <div class="category-item" onclick="scrollToCategory(4)">
+            <a href="../Admin-Page/Login.html"><img src="./style/image/Materials.png" alt="資料" class="tooltip">
+            <p>資料</p></a>
+        </div>
+    </div>
+    
+    
+    <section id="qa-section">
+        <h2 class="Category" id="1">お客様</h2>
+
+        <details id="qa1">
+            <summary>1</summary>
+            <p>丸モチーフ、背景は青色で文字は白字です。</p>
+        </details>
+
+        <details id="qa2">
+            <summary>2</summary>
+            <p>モチーフ、背景は白色で文字は青字です。</p>
+        </details>
+
+        <h2 class="Category" id="2">依頼元</h2>
+
+        <details id="qa3">
+            <summary>3</summary>
+            <p>丸モチーフ、一線で囲ったデザインで文字は赤字です。</p>
+        </details>
+
+        <details id="qa4">
+            <summary>4</summary>
+            <p>丸モチーフ、背景が濃い色で文字は白字です。</p>
+        </details>
+
+        <details id="qa5">
+            <summary>5</summary>
+            <p>四角モチーフ、背景は白色で文字は赤字です。</p>
+        </details>
+
+        <h2 class="Category" id="3">サービス</h2>
+
+        <details id="qa6">
+            <summary>33</summary>
+            <p>丸モチーフ、一線で囲ったデザインで文字は赤字です。</p>
+        </details>
+
+        <details id="qa7">
+            <summary>4</summary>
+            <p>丸モチーフ、背景が濃い色で文字は白字です。</p>
+        </details>
+
+        <details id="qa8">
+            <summary>5</summary>
+            <p>四角モチーフ、背景は白色で文字は赤字です。</p>
+        </details>
+        
+    </section>
+
+    <footer class="footer">
+        <p class="copyright">© 2024.09.01 </p>
+        <ul class="md-flex">
+          <li><a href="#">サイトマップ</a></li>
+          <li><a href="../Admin-Page/Login.html" target="_blank">Admin-Page</a></li>
+        </ul>
+    </footer>
+
+    <script src="./script/script.js"></script>
+    <script src="./script/localdeta-user.js"></script>
+    
+</body>
+</html>
