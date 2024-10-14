@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理画面</title>
+    <link rel="stylesheet" href="css/admin-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>メニュー</h2>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <br>
+            <li><a href="/スタート/start-tool-index.html" target="_blank">資料ツール</a></li>
+            <li><a href="/ポータル/portal-index.html" target="_blank">ポータルサイト</a></li>
+            <li><a href="/FAQ/faq-index.html">FAQ</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="column-area">
+            <div class="column">
+                <h1>ダッシュボード</h1>
+                <div class="text-data">
+                    <h2>投稿数</h2>
+                    <p>今週の投稿数: <span id="weekly-count">0</span> <span id="weekly-comparison" class="comparison"></span></p>
+                    <p>今月の投稿数: <span id="monthly-count">0</span> <span id="monthly-comparison" class="comparison"></span></p>
+                    <p><b><u>重要な投稿数（累計）: <span id="flagged-count">0</span></u></b></p>
+                </div>
+                <br><br><br>
+                <div class="chart-container">
+                    <h2>今月の投稿数グラフ</h2>
+                    <canvas id="recentPostsChart"></canvas>
+                </div>
+            </div>
+            <div class="column">
+                <div class="chart-container">
+                    <h2>全期間の投稿数グラフ</h2>
+                    <p><b>総投稿数: <span id="total-posts">0</span></b></p>
+                    <canvas id="allPostsChart"></canvas>
+                </div>
+                <div class="chart-with-legend">
+                    <div class="chart-container" id="circle">
+                        <h2>タグの割合</h2>
+                        <canvas id="tagPieChart"></canvas>
+                    </div>
+                    <ul class="legend" id="tagLegend"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/topic.js"></script>
+    <script src="js/admin-script.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

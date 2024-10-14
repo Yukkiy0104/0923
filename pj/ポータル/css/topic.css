@@ -1,0 +1,162 @@
+/* 全体のリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 基本の背景とフォントスタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 80%;
+    margin: auto;
+}
+
+/* テーブルのスタイル */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 30px;
+}
+
+/* テーブルヘッダーのスタイル */
+table thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+table thead th {
+    padding: 12px 15px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer; /* ヘッダーをクリック可能にする */
+}
+
+table thead th.sort-asc::after {
+    content: ' ▲'; /* 昇順ソートを示すアイコン */
+}
+
+table thead th.sort-desc::after {
+    content: ' ▼'; /* 降順ソートを示すアイコン */
+}
+
+table thead th#flag-header button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* テーブル行のスタイル */
+table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:last-child {
+    border-bottom: none;
+}
+
+table tbody td {
+    padding: 12px 15px;
+}
+
+/* フラグアイコンのスタイル */
+.flag-icon {
+    width: 50px; /* サイズを少し大きく */
+    height: 30px; /* サイズを少し大きく */
+    display: block;
+    margin: auto; /* 中央に配置 */
+}
+
+/* タイトルのリンクスタイル */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* タグのスタイル */
+td:nth-child(3) {
+    color: #555;
+    font-style: italic;
+}
+
+/* 検索コンテナのスタイル */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    padding: 8px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 12px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    table thead {
+        display: none;
+    }
+
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+    }
+
+    table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+        background-color: #f0f4f8;
+        border-right: 1px solid #e0e0e0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}

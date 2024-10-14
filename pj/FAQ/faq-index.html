@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A</title>
+    <link rel="stylesheet" href="/FAQ/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <a id="top"></a> <!-- ページ最上部のアンカー -->  
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="質問を検索">
+            <button onclick="searchQA()">検索</button>
+        </div>
+
+    <!-- 検索結果を表示するセクション -->
+    <div id="search-results"></div>
+
+    <!-- カテゴリリンク&ツールチップ -->
+    <div id="category-links">
+        <div class="category-item" onclick="scrollToCategory(1)">
+            <i class="fa-regular fa-user"></i><p>お客様</p>
+            <span class="tooltip">お客様に関する質問</span>
+        </div>
+        <div class="category-item" onclick="scrollToCategory(2)">
+            <i class="fa-regular fa-building"></i><p>依頼元</p>
+            <span class="tooltip">依頼元に関する質問</span>
+        </div>
+        <div class="category-item" onclick="scrollToCategory(3)">
+            <i class="fa-solid fa-screwdriver-wrench"></i><p>サービス</p>
+            <span class="tooltip">サービスに関する質問</span>
+        </div>
+    </div>
+    
+    <section id="qa-section">
+        <h2 class="Category" id="1">お客様</h2>
+
+        <details id="qa1">
+            <summary>1</summary>
+            <p>この文章はダミーです。<br>
+            文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+        </details>
+        
+
+        <details id="qa2">
+            <summary>2</summary>
+            <p>モチーフ、背景は白色で文字は青字です。</p>
+        </details>
+
+        <br>
+        <br>
+
+        <h2 class="Category" id="2">依頼元</h2>
+
+        <details id="qa3">
+            <summary>3</summary>
+            <p>丸モチーフ、一線で囲ったデザインで文字は赤字です。</p>
+        </details>
+
+        <details id="qa4">
+            <summary>4</summary>
+            <p>丸モチーフ、背景が濃い色で文字は白字です。</p>
+        </details>
+
+        <details id="qa5">
+            <summary>5</summary>
+            <p>四角モチーフ、背景は白色で文字は赤字です。</p>
+        </details>
+
+        <br>
+        <br>
+
+        <h2 class="Category" id="3">サービス</h2>
+
+        <details id="qa6">
+            <summary>33</summary>
+            <p>丸モチーフ、一線で囲ったデザインで文字は赤字です。</p>
+        </details>
+
+        <details id="qa7">
+            <summary>4</summary>
+            <p>丸モチーフ、背景が濃い色で文字は白字です。</p>
+        </details>
+
+        <details id="qa8">
+            <summary>5</summary>
+            <p>四角モチーフ、背景は白色で文字は赤字です。</p>
+        </details>
+        
+    </section>
+
+    <div class="side">
+        <img src="css/image/faq.png" alt="Logo" class="logo"> <!-- ロゴ画像 -->
+        <ol class="side-categorylist">
+            <li data-index="1">
+                <button onclick="toggleSubcategory(1)">お客様</button>
+                <ol id="subcategory-1" class="sub-categorylist">
+                    <li data-subindex="1-1"><a href="#1-1">詳細1-1</a></li>
+                    <li data-subindex="1-2"><a href="#1-2">詳細1-2</a></li>
+                </ol>
+            </li>
+            <li data-index="2">
+                <button onclick="toggleSubcategory(2)">依頼元</button>
+                <ol id="subcategory-2" class="sub-categorylist">
+                    <li data-subindex="2-1"><a href="#2-1">詳細2-1</a></li>
+                    <li data-subindex="2-2"><a href="#2-2">詳細2-2</a></li>
+                </ol>
+            </li>
+            <li data-index="3">
+                <button onclick="toggleSubcategory(3)">サービス</button>
+                <ol id="subcategory-3" class="sub-categorylist">
+                    <li data-subindex="3-1"><a href="#3-1">詳細3-1</a></li>
+                    <li data-subindex="3-2"><a href="#3-2">詳細3-2</a></li>
+                </ol>
+            </li>
+        </ol>
+        <ul>
+            <li><a href="/ポータル/portal-index.html">ポータル画面へ戻る</a></li>
+            <li><a href="/ポータル/admin-index.html">管理者画面へ遷移する</a></li>
+            <li><a href="/スタート/#">資料倉庫へ戻る</a></li>
+            <li><a href="">今週のトピック</a></li>
+        </ul>
+    </div>
+    
+    
+
+    <footer class="footer">
+        <p class="copyright">© 2024.09.01 </p>
+        <ul class="md-flex">
+          <li><a href="#">サイトマップ</a></li>
+          <li><a href="../templates/admin-index.html" target="_blank">Admin-Page</a></li>
+        </ul>
+    </footer>
+
+    <script src="/FAQ/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
+
+    
+</body>
+</html>

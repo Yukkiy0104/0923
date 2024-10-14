@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今月のトピック</title>
+    <link rel="stylesheet" href="/ポータル/css/topic.css">
+</head>
+<body>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="タイトルを検索">
+        <button onclick="searchTitle()">検索</button>
+    </div>
+
+    <div id="tag-filters">
+        <label><input type="checkbox" class="tag-checkbox" value="アップデート"> アップデート</label>
+        <label><input type="checkbox" class="tag-checkbox" value="マニュアル"> マニュアル</label>
+        <label><input type="checkbox" class="tag-checkbox" value="レポート"> レポート</label>
+        <label><input type="checkbox" class="tag-checkbox" value="テスト"> テスト</label>
+        <label><input type="checkbox" class="tag-checkbox" value="概要"> 概要</label>
+    </div>
+
+    <div class="sort-container">
+        <button onclick="sortTable('date', 'asc')">日付 昇順</button>
+        <button onclick="sortTable('date', 'desc')">日付 降順</button>
+        <button onclick="sortTable('flag', 'asc')">フラグ なし</button>
+        <button onclick="sortTable('flag', 'desc')">フラグ あり</button>
+    </div>
+
+    <table id="table-monthly">
+        <thead>
+            <tr>
+                <th>更新日</th>
+                <th>タイトル</th>
+                <th>タグ</th>
+                <th>フラグ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- JavaScriptでデータ挿入を行うため、code記入不可 -->
+        </tbody>
+    </table>
+
+    <script src="/ポータル/js/topic.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            populateTable('table-monthly', monthlyData);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社のポータルサイト</title>
+    <link rel="stylesheet" href="/ポータル/css/portal-style.css">
+</head>
+<body>
+    <header>
+        <h1>ポータルサイト</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="タイトルを検索"><button onclick="searchTitle()">検索</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#purpose">目的</a></li>
+            <li><a href="#goals">目標</a></li>
+            <li><a href="#weekly-topic">今週のTopic</a></li>
+            <li><a href="#monthly-topic">月間Topic</a></li>
+            <li><a href="#past-topics">過去の周知</a></li>
+            <li><a href="#rules">ルール</a></li>
+            <li><a href="#qa">Q＆A</a></li>
+        </ul>
+    </nav>
+
+    <div id="search-results"></div> <!-- 検索結果表示エリア -->
+    
+    <main>
+        <section id="purpose">
+            <h2>目的</h2>
+            <p>
+                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。<br>
+                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。<br>
+            </p>
+        </section>
+
+        <section id="goals">
+            <h2>目標</h2>
+            <p>
+                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。<br>
+                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。<br>
+            </p>
+        </section>
+
+        <div class="topics-row">
+            <section id="weekly-topic">
+                <h2>今週のTopic</h2>
+                <div id="weekly-content"></div>
+                <br>
+                <button onclick="window.open('/ポータル/iframe/weekly-topic.html')" id="show-more-weekly">もっと見る</button>
+            </section>
+
+            <section id="monthly-topic">
+                <h2>月間Topic</h2>
+                <div id="monthly-content"></div>
+                <br>
+                <button onclick="window.open('/ポータル/iframe/monthly-topic.html')" id="show-more-monthly">もっと見る</button>
+            </section>
+        </div>
+
+        <section id="past-topics">
+            <h2>過去の周知</h2>
+            <div id="past-content"></div>
+            <br>
+            <button onclick="window.open('/ポータル/iframe/past-topic.html')" id="show-more-past">もっと見る</button>
+        </section>
+
+        <section id="rules">
+            <h2>ルール</h2>
+            <p>
+                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。<br>
+                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。<br>
+            </p>
+        </section>
+
+        <section id="qa">
+            <h2>FAQ</h2>
+            <a href="/FAQ/faq-index.html">FAQはコチラから</a>
+        </section>
+    </main>
+
+    <script src="/ポータル/js/topic.js"></script>
+    <script src="/ポータル/js/portal-script.js"></script>
+    <script src="/ポータル/js/search-portalindex.js"></script>
+</body>
+</html>
